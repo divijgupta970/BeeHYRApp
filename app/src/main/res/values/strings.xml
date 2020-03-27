@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BeeHyr</string>
+    <string name="logo">BeeHYR</string>
+    <string name="caption">भारत का सबसे बड़ा रोजगार</string>
+    <string name="enter_number">अपना मोबाइल नंबर दर्ज करें</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_otp">OTP दर्ज़ करे</string>
+    <string name="get_otp">OTP प्राप्त करने के लिए क्लिक करें</string>
+    <string name="create_profile">अपनी प्रोफ़ाइल बनाएँ</string>
+    <string name="otp_otp_again">OTP नहीं मिला? OTP फिर से प्राप्त करें</string>
+    <string name="about_you">अपने बारे में बताए</string>
+    <string name="next">आगे बढ़ें</string>
+    <string name="name">नाम</string>
+    <string name="dob">जन्म की तारीख</string>
+    <string name="address">घर का पता</string>
+    <string name="click_photo">अपनी फोटो क्लिक करें</string>
+    <string name="searching">हम आपके क्षेत्र में नौकरियों की तलाश कर रहे हैं</string>
+    <string name="welcome">आपका स्वागत है</string>
+    <string name="choose_area">अपना क्षेत्र चुनें</string>
+    <string name="search_jobs">अपने क्षेत्र में नौकरियों की तलाश करें</string>
+</resources>
