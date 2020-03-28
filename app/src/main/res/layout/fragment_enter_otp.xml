@@ -43,6 +43,7 @@
         android:layout_marginEnd="32dp"
         android:inputType="number"
         android:layout_marginBottom="32dp"
+        android:textSize="28sp"
         app:pinAnimationType="popIn"
         app:layout_constraintBottom_toTopOf="@+id/btnOtp"
         app:layout_constraintEnd_toEndOf="parent"

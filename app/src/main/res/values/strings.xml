@@ -20,4 +20,11 @@
     <string name="welcome">आपका स्वागत है</string>
     <string name="choose_area">अपना क्षेत्र चुनें</string>
     <string name="search_jobs">अपने क्षेत्र में नौकरियों की तलाश करें</string>
+    <string name="delivery">वितरण</string>
+    <string name="plumber">प्लम्बर</string>
+    <string name="driver">चालक</string>
+    <string name="jobs_available">31 नौकरियां उपलब्ध हैं</string>
+    <string name="increase_radius">अपनी खोज का दायरा बढ़ाएं</string>
+    <string name="delivery_executive">वितरण कार्यकारी</string>
+    <string name="apply">आवेदन</string>
 </resources>

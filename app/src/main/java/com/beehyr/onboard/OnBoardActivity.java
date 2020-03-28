@@ -3,6 +3,7 @@ package com.beehyr.onboard;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.beehyr.R;
+import com.beehyr.jobSearch.JobSearchActivity;
 import com.theartofdev.edmodo.cropper.CropImage;
 
 public class OnBoardActivity extends AppCompatActivity implements OTPFragment.Callback, EnterOTPFragment.Callback, ProfileFragment.Callback, WelcomeFragment.Callback {
@@ -45,8 +47,10 @@ public class OnBoardActivity extends AppCompatActivity implements OTPFragment.Ca
             profileFragment.setCallback(this);
 
         } else if (fragment instanceof WelcomeFragment) {
+
             WelcomeFragment welcomeFragment = (WelcomeFragment) fragment;
             welcomeFragment.setCallback(this);
+
         }
     }
 
@@ -102,5 +106,13 @@ public class OnBoardActivity extends AppCompatActivity implements OTPFragment.Ca
     public void onSearchClicked() {
         SearchingFragment searchingFragment = new SearchingFragment();
         replaceFragment(searchingFragment, "SearchingFragment");
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(new Intent(OnBoardActivity.this, JobSearchActivity.class));
+                OnBoardActivity.this.finish();
+            }
+        }, 4000);
     }
 }
