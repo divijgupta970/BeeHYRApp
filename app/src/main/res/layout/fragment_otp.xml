@@ -45,6 +45,7 @@
         android:layout_marginBottom="32dp"
         android:textAlignment="center"
         android:textSize="28sp"
+        android:inputType="phone"
         app:layout_constraintBottom_toTopOf="@+id/btnOtp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

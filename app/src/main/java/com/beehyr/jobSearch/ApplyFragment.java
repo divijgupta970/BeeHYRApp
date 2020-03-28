@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.beehyr.R;
+import com.google.android.material.button.MaterialButton;
 import com.skydoves.expandablelayout.ExpandableLayout;
 
 /**
@@ -21,6 +22,7 @@ import com.skydoves.expandablelayout.ExpandableLayout;
 public class ApplyFragment extends Fragment {
 
     private boolean isExpanded = false;
+    private Callback callback = null;
 
 
     public ApplyFragment() {
@@ -33,6 +35,10 @@ public class ApplyFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_apply, container, false);
+    }
+
+    public void setCallback(Callback callback) {
+        this.callback = callback;
     }
 
     @Override
@@ -65,5 +71,24 @@ public class ApplyFragment extends Fragment {
                 }
             }
         });
+
+        MaterialButton btnApply = view.findViewById(R.id.btnApply);
+        btnApply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callback.onGoToQuestionsClicked();
+            }
+        });
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        callback = null;
+
+    }
+
+    interface Callback {
+        void onGoToQuestionsClicked();
     }
 }

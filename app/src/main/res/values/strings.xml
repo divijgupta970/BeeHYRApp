@@ -27,4 +27,11 @@
     <string name="increase_radius">अपनी खोज का दायरा बढ़ाएं</string>
     <string name="delivery_executive">वितरण कार्यकारी</string>
     <string name="apply">आवेदन</string>
+    <string name="questions_for_applying">आवेदन करने के लिए प्रश्न</string>
+    <string name="questions_finished">प्रश्न समाप्त</string>
+    <string name="thank_you">आपके आवेदन के लिए धन्यवाद</string>
+    <string name="find_more_jobs">अपने क्षेत्र में और नौकरियां खोजें</string>
+    <string name="under_review">आपके आवेदान की समीक्षा चल रही है। इंटरव्यू के लिए चुने जाने पर इस एप्प के माध्यम से आपको सूचित किया जायेगा।</string>
+    <string name="question1">प्रश्न 1</string>
+    <string name="question2">प्रश्न 2</string>
 </resources>

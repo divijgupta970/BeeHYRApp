@@ -4,11 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.beehyr.R;
+import com.beehyr.questions.QuestionsActivity;
 
-public class JobSearchActivity extends AppCompatActivity implements JobResultsFragment.Callback{
+public class JobSearchActivity extends AppCompatActivity implements JobResultsFragment.Callback, ApplyFragment.Callback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +33,12 @@ public class JobSearchActivity extends AppCompatActivity implements JobResultsFr
     public void onAttachFragment(@NonNull Fragment fragment) {
         super.onAttachFragment(fragment);
 
-        if (fragment instanceof JobResultsFragment){
+        if (fragment instanceof JobResultsFragment) {
             JobResultsFragment jobResultsFragment = (JobResultsFragment) fragment;
             jobResultsFragment.setCallback(this);
+        } else if(fragment instanceof ApplyFragment) {
+            ApplyFragment applyFragment = (ApplyFragment) fragment;
+            applyFragment.setCallback(this);
         }
     }
 
@@ -41,5 +46,10 @@ public class JobSearchActivity extends AppCompatActivity implements JobResultsFr
     public void onApplyClicked(JobItem item) {
         ApplyFragment applyFragment = new ApplyFragment();
         replaceFragmentBackEnabled(applyFragment);
+    }
+
+    @Override
+    public void onGoToQuestionsClicked() {
+        startActivity(new Intent(this, QuestionsActivity.class));
     }
 }

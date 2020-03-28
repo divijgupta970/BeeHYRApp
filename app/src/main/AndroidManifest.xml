@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".jobSearch.JobSearchActivity"></activity>
+        <activity android:name=".questions.QuestionsActivity"></activity>
+        <activity android:name=".jobSearch.JobSearchActivity"/>
         <activity android:name=".onboard.OnBoardActivity" />
         <activity android:name=".splash.SplashActivity">
             <intent-filter>

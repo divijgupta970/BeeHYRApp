@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".jobSearch.ApplyFragment">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".questions.SecondFragmentQuestion">
     <TextView
         android:id="@+id/tvJobsAvailable"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/apply"
+        android:layout_marginTop="16dp"
+        android:text="@string/question2"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
         android:textColor="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,57 +68,41 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <com.skydoves.expandablelayout.ExpandableLayout
-        android:id="@+id/expandableLayout1"
+    <TextView
+        android:id="@+id/tvQuestion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        app:expandable_duration="300"
-        app:expandable_parentLayout="@layout/layout_parent"
-        app:expandable_secondLayout="@layout/layout_child"
-        app:expandable_showSpinner="true"
-        app:expandable_spinner="@drawable/ic_arrow_down"
-        app:expandable_spinner_animate="true"
-        app:expandable_spinner_color="@color/blackTransparent"
-        app:expandable_spinner_margin="14dp"
-        app:expandable_spinner_size="32dp"
+        android:layout_marginTop="56dp"
+        android:padding="8dp"
+        android:text="कृपया अपना आधार कार्ड प्रस्तुत करें"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
 
-    <com.skydoves.expandablelayout.ExpandableLayout
-        android:id="@+id/expandableLayout2"
+    <ImageView
+        android:id="@+id/ivCamera"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        app:expandable_duration="300"
-        app:expandable_isExpanded="false"
-        app:expandable_parentLayout="@layout/layout_parent"
-        app:expandable_secondLayout="@layout/layout_child"
-        app:expandable_showSpinner="true"
-        app:expandable_spinner="@drawable/ic_arrow_down"
-        app:expandable_spinner_animate="true"
-        app:expandable_spinner_color="@color/blackTransparent"
-        app:expandable_spinner_margin="14dp"
-        app:expandable_spinner_size="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
+        app:layout_constraintDimensionRatio="16:9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/expandableLayout1" />
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestion"
+        app:srcCompat="@drawable/ic_camera_primary" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnApply"
-        android:layout_width="0dp"
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="Next"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp"
-        android:textSize="20sp"
-        android:backgroundTint="@color/colorAccent"
-        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-        android:text="@string/questions_for_applying"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
